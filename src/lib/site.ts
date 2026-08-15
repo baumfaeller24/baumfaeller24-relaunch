@@ -1,3 +1,8 @@
+const IMG = (file: string) =>
+  import.meta.env.PROD
+    ? `https://raw.githubusercontent.com/baumfaeller24/baumfaeller24-relaunch/main/public/images/${file}`
+    : `/images/${file}`;
+
 export const site = {
   name: "Baumfäller24",
   legalName: "Baumfäller24 — Alexander Seidler",
@@ -43,7 +48,7 @@ export const services = [
     title: "Seilklettertechnik & Rigging",
     short: "Stückweise Abtragung auf engstem Raum — ohne schweren Maschineneinsatz im Garten.",
     body: "Wenn der Baum nicht frei fallen darf, tragen wir ihn kontrolliert ab. Mit Seilklettertechnik erreichen wir jede Krone, auch zwischen Häusern, über Wintergärten oder in Hinterhöfen. Äste und Stammstücke werden per Rigging abgeseilt — der Rasen bleibt, wo er ist.",
-    image: "/images/service-skt.jpg",
+    image: IMG("service-skt.jpg"),
     points: [
       "Zugang ohne Hebebühne und ohne Zufahrt",
       "Kontrolliertes Abseilen (Rigging)",
@@ -55,7 +60,7 @@ export const services = [
     title: "Fällung mit Hebebühne",
     short: "Schnelle, sichere Arbeiten an Straßenbäumen und auf großen Grundstücken.",
     body: "Wo die Zufahrt es zulässt, arbeiten wir mit Hubarbeitsbühne. Das ist oft die effizienteste Methode für Alleebäume, Vorgärten und Gewerbeflächen — weniger Kletterzeit, präziser Schnitt, saubere Baustelle.",
-    image: "/images/service-lift.jpg",
+    image: IMG("service-lift.jpg"),
     points: [
       "Straßen- und Vorgartenbäume",
       "Schneller als reines Klettern",
@@ -67,7 +72,7 @@ export const services = [
     title: "Rodung & Baufeldfreimachung",
     short: "Verwilderte Flächen werden in wenigen Tagen bebaubar.",
     body: "Für Bauträger, Hausverwaltungen und Kommunen räumen wir Grundstücke: Fällung, Rodung, Schreddern, Abfuhr. Im Innenstadtbereich mit Spezialgeräten, auf der Fläche mit Bagger und Großschredder. Wo kein Platz ist, mit Seilwinde und Säge.",
-    image: "/images/service-clearance.jpg",
+    image: IMG("service-clearance.jpg"),
     points: [
       "Baufeldfreimachung inkl. Entsorgung",
       "Bagger, Schredder, Seilwinden",
@@ -79,7 +84,7 @@ export const services = [
     title: "Stubben fräsen",
     short: "Der Stumpf ist weg — der Platz wieder nutzbar.",
     body: "Nach der Fällung bleibt der Stubben. Wir fräsen ihn bodenschonend aus, damit neu gepflanzt, gepflastert oder gemäht werden kann. Die Späne können als Mulch liegen bleiben oder werden abgefahren.",
-    image: "/images/service-stump.jpg",
+    image: IMG("service-stump.jpg"),
     points: [
       "Bodenschonende Fräsung",
       "Vorbereitung für Neubepflanzung",
@@ -91,7 +96,7 @@ export const services = [
     title: "Gartenpflege & GaLaBau",
     short: "Saison-, Jahres- oder Zweijahresvertrag. Steuerlich absetzbar.",
     body: "Unter Gartendachs übernehmen wir die laufende Pflege: Schnitt, Beete, Rasen, Hecken. Dazu Wege, Zäune, Pflanzungen und Ersatzbäume. Haushalte können die Leistung als haushaltsnahe Dienstleistung steuerlich geltend machen.",
-    image: "/images/service-garden.jpg",
+    image: IMG("service-garden.jpg"),
     points: [
       "Pflegeverträge für Privat und Verwaltung",
       "Neupflanzung und Großbaumverpflanzung",
@@ -103,7 +108,7 @@ export const services = [
     title: "Notfällung & Sturmschaden",
     short: "Wenn der Baum nicht warten kann.",
     body: "Verkehrssicherheit geht vor Vogelschutzfrist. Bei Bruch, Pilz, Sturmschaden oder akuter Gefahr rücken wir auch außerhalb der Fällsaison aus. Ein Anruf genügt — wir sichern, fällen, räumen.",
-    image: "/images/service-storm.jpg",
+    image: IMG("service-storm.jpg"),
     points: [
       "Unwetter- und Bruchholz",
       "Sicherung von Straßen und Dächern",
@@ -382,3 +387,8 @@ export const faqs = [
     a: "Abfuhr als Stammholz oder Häcksel, Verbleib als Brennholz, oder Schreddern vor Ort. Container stellen wir auf Anfrage.",
   },
 ];
+
+export const photos = {
+  hero: IMG("hero.jpg"),
+  bark: IMG("texture-bark.jpg"),
+};

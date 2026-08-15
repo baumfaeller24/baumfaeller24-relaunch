@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import {
   clients,
   faqs,
+  photos,
   processSteps,
   seasonCopy,
   services,
@@ -32,7 +33,7 @@ function HomePage() {
     <>
       <section className="relative min-h-[92svh] bg-bark text-bone">
         <img
-          src="/images/hero.jpg"
+          src={photos.hero}
           alt="Baumkletterer in der Krone einer großen Eiche bei Morgendämmerung"
           className="absolute inset-0 size-full object-cover"
         />
@@ -184,7 +185,7 @@ function HomePage() {
 
       <section className="relative overflow-hidden bg-bark text-bone">
         <img
-          src="/images/texture-bark.jpg"
+          src={photos.bark}
           alt=""
           className="absolute inset-0 size-full object-cover opacity-30"
         />
