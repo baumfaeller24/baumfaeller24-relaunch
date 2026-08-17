@@ -11,7 +11,7 @@ export const Route = createFileRoute("/leistungen")({
       {
         name: "description",
         content:
-          "Seilklettertechnik, Hebebühne, Rodung, Stubbenfräsen, Gartenpflege und Notfällung in Berlin und Brandenburg.",
+          "Baufeldfreimachung, Rodung mit schwerer Technik, Seilklettertechnik, Sturmschadenbeseitigung und Stubbenfräsen in Berlin und Brandenburg.",
       },
     ],
   }),
@@ -22,8 +22,8 @@ function LeistungenPage() {
     <>
       <PageHero
         eyebrow="Leistungen"
-        title="Was wir wirklich tun — und wofür wir geholt werden."
-        lead="Die alte Seite hat alles in eine Keyword-Wolke gepackt. Hier die Arbeit, nach der Auftraggeber tatsächlich fragen."
+        title="Was wir tun — und wofür wir geholt werden."
+        lead="Große Flächen und enge Höfe. Schwere Technik und Seilklettertechnik. Bauablauf und Privatgrundstück. Die Arbeit, nach der Auftraggeber tatsächlich fragen."
       />
       <div className="mx-auto max-w-6xl space-y-20 px-4 py-16 sm:px-6">
         {services.map((s, i) => (
@@ -55,11 +55,15 @@ function LeistungenPage() {
       <section className="border-t border-line bg-cream">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-4 py-14 sm:flex-row sm:items-center sm:px-6">
           <div>
-            <h2 className="font-display text-2xl font-medium">Nächster Schritt: Fotos und Umfang.</h2>
-            <p className="mt-2 text-muted">Wir kalkulieren Technik und Entsorgung — ohne Vor-Ort-Zwang.</p>
+            <h2 className="font-display text-2xl font-medium">
+              Nächster Schritt: Pläne, Fotos oder Flächenangabe.
+            </h2>
+            <p className="mt-2 text-muted">
+              Wir kalkulieren Technik und Entsorgung — ohne unnötigen Vor-Ort-Zwang.
+            </p>
           </div>
           <Button asChild>
-            <Link to="/kontakt">Angebot anfordern</Link>
+            <Link to="/kontakt">Anfrage stellen</Link>
           </Button>
         </div>
       </section>
